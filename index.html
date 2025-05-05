@@ -1,69 +1,69 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio-Moliets</title>
-    <style>
-        /* Styles du lecteur */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-            
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio-Moliets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white; /* ou transparent si besoin */
+      font-family: 'Montserrat', sans-serif;
+    }
 
-            
+    .player-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .player-container {
-             width: 200px; /* on élargit pour que le texte tienne bien */
-              height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: pink;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-        }
+    button {
+      background: linear-gradient(to right, #d946ef, #6366f1); /* violet -> bleu */
+      color: white;
+      font-size: 18px;
+      padding: 10px 30px;
+      border: 4px solid orange;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-        button {
-            background: 726bd1; /* Couleur du bouton */
-            color: 726bd1 ;
-            font-size: 24px;
-            padding: 15px 45px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    button:hover {
+      transform: scale(1.05);
+    }
 
-        button:hover {
-            background: #e64a19; /* Couleur au survol */
-        }
-    </style>
+    button:focus {
+      outline: none;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="player-container">
-        <button id="playPauseBtn"> <b>Ecoutez !<b> ▶</button>
-        <audio id="webradio" src="https://solid55.streamupsolutions.com/proxy/roxnnbia/stream"></audio>
-    </div>
+  <div class="player-container">
+    <button id="playPauseBtn">▶ Play Landifornia</button>
+    <audio id="webradio" src="https://solid55.streamupsolutions.com/proxy/roxnnbia/stream"></audio>
+  </div>
 
-    <script>
-        const audio = document.getElementById("webradio");
-        const playPauseBtn = document.getElementById("playPauseBtn");
+  <script>
+    const audio = document.getElementById("webradio");
+    const playPauseBtn = document.getElementById("playPauseBtn");
 
-        playPauseBtn.addEventListener("click", function () {
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = "Pause  ⏸";
-            } else {
-                audio.pause();
-                playPauseBtn.textContent = "Ecoutez !  ▶";
-            }
-        });
-    </script>
+    playPauseBtn.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "⏸ Pause";
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = "▶ Play Landifornia";
+      }
+    });
+  </script>
 
 </body>
 </html>
