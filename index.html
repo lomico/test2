@@ -46,7 +46,7 @@
 <body>
 
   <div class="player-container">
-   <button id="playPauseBtn" aria-label="Play or pause the audio">Play Landifornia ▶ ▶</button>
+   <button id="playPauseBtn" aria-label="Play or pause the audio">Play Landifornia   ▶</button>
     <audio id="webradio" src="https://solid55.streamupsolutions.com/proxy/roxnnbia/stream"></audio>
   </div>
 
@@ -57,10 +57,10 @@
     playPauseBtn.addEventListener("click", function () {
       if (audio.paused) {
         audio.play();
-        playPauseBtn.textContent = "Pause⏸ ⏸ ";
+        playPauseBtn.textContent = "Pause  ⏸ ";
       } else {
         audio.pause();
-        playPauseBtn.textContent = "Play Landifornia  ▶";
+        playPauseBtn.textContent = "Play Landifornia   ▶";
       }
     });
   </script>
